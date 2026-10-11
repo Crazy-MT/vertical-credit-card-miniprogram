@@ -1,0 +1,2 @@
+page { background: #f5f7fb; color: #172c45; font-family: -apple-system, sans-serif; }
+button::after { border: 0; }

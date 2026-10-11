@@ -1,0 +1,1 @@
+.field{margin-bottom:16px;flex:1;min-width:0}.field>.vc-text{display:block;font-size:12px;color:#68768b;margin-bottom:7px}.field .vc-input{background:#f3f5f9;border:1px solid #dce3ee;border-radius:12px;padding:12px 14px;font-size:14px;height:22px;color:#172334}.row{display:flex;gap:14px}

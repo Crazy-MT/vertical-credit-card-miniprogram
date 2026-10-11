@@ -1,0 +1,14 @@
+{
+  "name": "vertical-credit-card-miniprogram",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Native WeChat Mini Program vertical credit card components",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "npm run typecheck && tsc --outDir .test-output && node scripts/self-check.cjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

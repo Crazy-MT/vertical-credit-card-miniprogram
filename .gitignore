@@ -1,0 +1,4 @@
+node_modules/
+.test-output/
+project.private.config.json
+.DS_Store

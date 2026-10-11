@@ -1,0 +1,80 @@
+:host { display:inline-block }
+.viewport { position:relative;perspective:1000px }
+.scale { width:240px;height:380.64px;transform-origin:top left }
+.tilt { width:100%;height:100%;transform-style:preserve-3d;transition:transform .4s cubic-bezier(.2,.8,.2,1) }
+.card { width:100%;height:100%;position:relative;box-sizing:border-box;transform-style:preserve-3d }
+.flipper { border-radius:inherit;width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1) }
+.face { position:absolute;inset:0;overflow:hidden;border-radius:inherit;backface-visibility:hidden;background:inherit }
+.front { border-radius:inherit }
+.back { transform:rotateY(180deg);border-radius:inherit }
+.background { position:absolute;width:100%;height:100%;inset:0 }
+.front-content { position:relative;height:100%;box-sizing:border-box;padding:24px 22px;display:flex;flex-direction:column }
+.top { display:flex;align-items:center;min-height:24px;gap:8px }
+.bank { font-size:16px;font-weight:800;letter-spacing:2px;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-transform:uppercase }
+.badge { font-size:9px }
+.contactless { width:22px;height:22px;position:relative;opacity:.75;flex-shrink:0 }
+.contactless .vc-view { position:absolute;border:2px solid currentColor;border-left-color:transparent;border-top-color:transparent;border-bottom-color:transparent;border-radius:50%;top:50%;left:0;transform:translateY(-50%) }
+.contactless .vc-view:nth-child(1) { width:5px;height:7px }
+.contactless .vc-view:nth-child(2) { width:11px;height:14px }
+.contactless .vc-view:nth-child(3) { width:17px;height:21px }
+.chip-row { display:flex;align-items:center;gap:8px;margin-top:24px }
+.arrow { font-size:16px;opacity:.35 }
+.bottom { margin-top:auto }
+.number { font-size:14px;font-weight:700;letter-spacing:1px;display:flex;align-items:center;white-space:nowrap;min-height:22px }
+.number .vc-text:first-child { flex:1 }
+.eye { font-size:15px;opacity:.5;margin-left:4px }
+.details { display:flex;justify-content:space-between;align-items:flex-end;margin-top:18px;gap:8px }
+.owner { min-width:0;flex:1 }
+.expiry { display:flex;gap:6px;align-items:center;font-size:12.5px;font-weight:700;letter-spacing:1.2px }
+.label { font-size:8.5px;color:var(--secondary);letter-spacing:.8px }
+.holder { font-size:13px;font-weight:700;letter-spacing:1.5px;margin-top:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis }
+.stripe { position:relative;height:42px;margin-top:24px;background:linear-gradient(90deg,#141416,#28282c,#18181b) }
+.signature-area { position:relative;margin:22px 20px }
+.signature-label { font-size:7px;letter-spacing:.5px;color:var(--secondary);opacity:.6;margin-bottom:5px }
+.signature-row { display:flex;gap:8px }
+.signature { flex:7;background:#f2f4f8;color:#73757b;font-family:cursive;font-style:italic;padding:8px 10px;border-radius:4px;font-size:14px }
+.cvv { flex:3;background:white;color:#15161a;padding:8px 0;text-align:center;border-radius:4px;font-size:13.5px;font-weight:900;letter-spacing:1.5px;font-style:italic }
+.back-footer { position:absolute;bottom:22px;left:20px;right:20px;display:flex;gap:14px;align-items:flex-end }
+.back-footer>.vc-text { font-size:7.5px;line-height:1.3;color:var(--secondary);opacity:.55;flex:1 }
+.security-seal { width:42px;height:28px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(120deg,#aae5ef,#d8b7ff,#f4da9c,#9affce);box-shadow:0 1px 4px #0004 }
+.overlay { position:absolute;inset:0;border-radius:inherit;pointer-events:none;overflow:hidden }
+.frost { background:linear-gradient(130deg,#d4f0ff99,#eaf5ff55,#b4dfffaa);backdrop-filter:blur(2px);display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;text-shadow:0 2px 8px #315783 }
+.frost>.vc-text:first-child { font-size:56px }
+.frozen-label { font-size:16px;font-weight:800;letter-spacing:3px }
+.melting { animation:melt .75s ease-out forwards }
+.expired { filter:grayscale(1) }
+.expired-stamp { display:flex;align-items:center;justify-content:center }
+.expired-stamp .vc-text { padding:8px 16px;font-size:22px;font-weight:900;letter-spacing:4px;border:3px solid #ffffffbb;color:#ffffffbb;transform:rotate(-22deg) }
+.finish-embossed { text-shadow:-1px -1px 1px #ffffff88,1.2px 1.5px 2px #000b }
+@keyframes melt { to{opacity:0;filter:blur(12px)} }
+.front-content { text-align:left }
+.signature-area,.back-footer { text-align:left }
+.effect-canvas,.fluid-canvas { position:absolute;inset:0;width:240px;height:380.64px;pointer-events:none;border-radius:inherit }
+.fluid-canvas { z-index:1 }
+.front-content,.stripe,.signature-area,.back-footer { z-index:2 }
+.chip-image { width:44px;height:34px }
+.security-image { width:42px;height:28px;border-radius:4px;flex-shrink:0 }
+.frost { background:transparent;backdrop-filter:none }
+.frost-texture { position:absolute;inset:0;width:100%;height:100% }
+.freeze-lock { position:relative;width:42px;height:52px;filter:drop-shadow(0 2px 8px #315783) }
+.freeze-shackle { position:absolute;left:9px;top:0;width:20px;height:27px;border:3px solid white;border-radius:12px }
+.freeze-body { position:absolute;bottom:0;left:0;width:42px;height:31px;border-radius:7px;background:white;color:#7ea9c8;line-height:29px;text-align:center }
+.frozen-label { position:relative;margin-top:14px }
+.finish-goldFoil .foil-text { background:linear-gradient(135deg,#ffdf73,#c9982e 30%,#fff4b8 50%,#a5761a 75%,#ffe680); }
+.finish-silverFoil .foil-text { background:linear-gradient(135deg,#f0f3f6,#a0aab4 30%,#fff 50%,#7b8590 75%,#e4e9ed); }
+.finish-roseGoldFoil .foil-text { background:linear-gradient(135deg,#ffd4c2,#c7846e 30%,#ffe8dc 50%,#a25945 75%,#ffceba); }
+.finish-goldFoil .foil-text,.finish-silverFoil .foil-text,.finish-roseGoldFoil .foil-text { color:transparent;background-clip:text;-webkit-background-clip:text;background-size:140% 140%;background-position:var(--foil-position,50%) 50%;text-shadow:0 1.5px 2px #0004; }
+
+
+.network { flex-shrink:0;display:flex;align-items:center;justify-content:center;height:28px; }
+.visa-wordmark { color:white;font-size:23.8px;font-weight:900;font-style:italic;letter-spacing:1.5px;text-shadow:1px 1px 3px #0006; }
+.mastercard-mark { position:relative;width:42.56px;height:28px; }
+.mastercard-red,.mastercard-yellow { position:absolute;top:.7px;width:26.6px;height:26.6px;border-radius:50%; }
+.mastercard-red { left:0;background:#eb001b; }
+.mastercard-yellow { right:0;background:#f79e1b;opacity:.92; }
+.amex-wordmark { height:28px;box-sizing:border-box;padding:2px 6px;line-height:24px;border-radius:4px;background:#007bc1;color:white;font-weight:900;font-size:11px;letter-spacing:1px; }
+.discover-wordmark { display:flex;align-items:center;color:white;font-weight:800;font-size:15.4px; }
+.discover-sun { width:12.6px;height:12.6px;border-radius:50%;background:#ff6000;margin:0 1.5px; }
+.generic-mark { width:39.2px;height:28px;border:1.5px solid #ffffff66;border-radius:5px;box-sizing:border-box;display:flex;align-items:center;justify-content:center; }
+.generic-card { width:20px;height:13px;border:1.5px solid #ffffffcc;border-radius:2px; }
+.generic-stripe { width:100%;height:3px;background:#ffffffcc;margin-top:2px; }

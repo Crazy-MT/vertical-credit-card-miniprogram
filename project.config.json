@@ -1,0 +1,15 @@
+{
+  "appid": "touristappid",
+  "projectname": "vertical-credit-card-miniprogram",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "setting": {
+    "useCompilerPlugins": [
+      "typescript"
+    ],
+    "es6": true,
+    "enhance": true,
+    "minified": true,
+    "uploadWithSourceMap": false
+  }
+}

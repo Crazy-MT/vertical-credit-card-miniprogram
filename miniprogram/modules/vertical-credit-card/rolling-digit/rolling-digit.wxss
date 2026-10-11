@@ -1,0 +1,1 @@
+:host{display:inline-block}.digits{display:inline-flex;white-space:pre;font-variant-numeric:tabular-nums;line-height:1.3}.window{width:.65em;height:1.3em;overflow:hidden}.reel{height:26em}.reel>.vc-view{height:1.3em;text-align:center}

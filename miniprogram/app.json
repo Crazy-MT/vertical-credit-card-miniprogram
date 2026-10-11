@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "modules/vertical-credit-card/demo/demo"
+  ],
+  "window": {
+    "navigationBarTitleText": "Vertical Credit Card",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "lazyCodeLoading": "requiredComponents"
+}

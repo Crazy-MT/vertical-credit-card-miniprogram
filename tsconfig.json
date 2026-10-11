@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "CommonJS",
+    "target": "ES2017",
+    "lib": [
+      "ES2020"
+    ],
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./typings"
+    ]
+  },
+  "include": [
+    "miniprogram/**/*.ts",
+    "typings/**/*.d.ts"
+  ]
+}

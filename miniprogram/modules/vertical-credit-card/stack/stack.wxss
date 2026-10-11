@@ -1,0 +1,1 @@
+.stack{position:relative}.stack-card{position:absolute;left:0;right:0;text-align:center;transform-origin:top center}
